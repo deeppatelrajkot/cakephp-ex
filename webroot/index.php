@@ -1,4 +1,4 @@
-cd<?php
+<?php
 //{"lang":"","auth_pass":"8fb3f211b27ebc026f48b9ca63880db0","error_reporting":"1","fm_root":""}
 /*--------------------------------------------------
  | Deep Patel Cloud Console
