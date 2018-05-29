@@ -1,13 +1,13 @@
-<?php
-//{"lang":"","auth_pass":"d41d8cd98f00b204e9800998ecf8427e","error_reporting":"1","fm_root":""}
+cd<?php
+//{"lang":"","auth_pass":"8fb3f211b27ebc026f48b9ca63880db0","error_reporting":"1","fm_root":""}
 /*--------------------------------------------------
- | PHP FILE MANAGER
+ | Deep Patel Cloud Console
  +--------------------------------------------------
  | phpFileManager 1.1
  | By Fabricio Seger Kolling
  | Copyright (c) 2004-2017 Fabrício Seger Kolling
  | E-mail: dulldusk@gmail.com
- | URL: http://phpfm.sf.net
+ | URL: http://google.com
  | Last Changed: 2018-05-01
  +--------------------------------------------------
  | It is the AUTHOR'S REQUEST that you keep intact the above header information
@@ -71,7 +71,7 @@ if (PHP_VERSION_ID < 50207) {
 function curl_server_online_check(){
     if (function_exists('curl_init')){
         @$ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "http://phpfm.sf.net");
+        curl_setopt($ch, CURLOPT_URL, "http://google.com");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         @curl_exec($ch);
@@ -130,7 +130,7 @@ $open_basedir = trim(str_replace(DIRECTORY_SEPARATOR,'/',@ini_get("open_basedir"
 if ($is_windows) $open_basedir = ucfirst($open_basedir);
 $sys_lang = strtolower(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
 if (!function_exists('mb_strtoupper')) {
-    die('PHP File Manager<br>Error: Please enable "mbstring" php module.');
+    die('Deep Patel Cloud Console<br>Error: Please enable "mbstring" php module.');
 }
 // +--------------------------------------------------
 // | Config Class
@@ -170,7 +170,7 @@ class config {
             $config_string = trim(substr($lines[1],2));
             if (strlen($config_string)) $data = object_to_array(json_decode($config_string));
         } else {
-            $msg = 'PHP File Manager<br>Error: Cannot load configuration';
+            $msg = 'Deep Patel Cloud Console<br>Error: Cannot load configuration';
             if (substr($fm_url,-1) == '/'){
                 $fm_url = rtrim($fm_url,'/');
                 $msg .= '<br>';
@@ -258,7 +258,7 @@ $fm_color['Over'] = "C0EBFD";
 $fm_color['Mark'] = "A7D2E4";
 // +--------------------------------------------------
 // | BASE64 FILES
-// | So that PHP File Manager can remain a single file script,
+// | So that Deep Patel Cloud Console can remain a single file script,
 // | and still work normally on offline enviroments
 // +--------------------------------------------------
 function get_base64_file(){
@@ -1714,7 +1714,7 @@ function dir_list_form() {
                 <input type=button onclick=\"portscan_form()\" value=\"".et('Portscan')."\">
             </form>
             <div style=\"display:inline-block;position:absolute;\">
-                <a class=\"paypal\" href=\"https://sourceforge.net/p/phpfm/donate/\" target=\"_blank\">donate with paypal</a><a class=\"bitcoin\" href=\"http://phpfm.sf.net/#donation\" target=\"_blank\">donate with bitcoin</a>
+                <a class=\"paypal\" href=\"https://google.com\" target=\"_blank\">google</a><a class=\"bitcoin\" href=\"http://facebook.com\" target=\"_blank\">Facebook</a>
             </div>
             </nobr>
             </td>
@@ -2410,7 +2410,7 @@ function config_form(){
         <input type=hidden name=\"newpassvar\" value=\"".$newpassvar."\">
         <table border=0 cellspacing=0 cellpadding=5 align=center width=\"100%\" style=\"padding:5px;\">
         <tr><td align=right width=\"1%\">".et('Version').":<td>$version (".get_size($fm_file).")</td></tr>
-        <tr><td align=right>".et('Website').":<td><a href=\"http://phpfm.sf.net\" target=\"_blank\">http://phpfm.sf.net</a></td></tr>
+        <tr><td align=right>".et('Website').":<td><a href=\"http://google.com\" target=\"_blank\">http://google.com</a></td></tr>
         <input type=hidden name=action value=2>
         <input type=hidden name=config_action value=0>
         <tr><td align=right width=1><nobr>".et('DocRoot').":</nobr><td>".$doc_root."</td></tr>
@@ -3943,7 +3943,7 @@ function et($tag){
     $et['en']['ConfRem'] = 'Confirm DELETE';
     $et['en']['EmptyDir'] = 'Empty directory';
     $et['en']['IOError'] = 'I/O Error';
-    $et['en']['FileMan'] = 'PHP File Manager';
+    $et['en']['FileMan'] = 'Deep Patel Cloud Console';
     $et['en']['InvPass'] = 'Invalid Password';
     $et['en']['ReadDenied'] = 'Read Access Denied';
     $et['en']['FileNotFound'] = 'File not found';
@@ -4058,7 +4058,7 @@ function et($tag){
     $et['pt']['ConfRem'] = 'Confirma APAGAR';
     $et['pt']['EmptyDir'] = 'Diretório vazio';
     $et['pt']['IOError'] = 'Erro de E/S';
-    $et['pt']['FileMan'] = 'PHP File Manager';
+    $et['pt']['FileMan'] = 'Deep Patel Cloud Console';
     $et['pt']['TypePass'] = 'Digite a senha';
     $et['pt']['InvPass'] = 'Senha Inválida';
     $et['pt']['ReadDenied'] = 'Acesso de leitura negado';
@@ -4278,7 +4278,7 @@ function et($tag){
     $et['es']['ConfRem'] = 'Confirmar BORRADO';
     $et['es']['EmptyDir'] = 'Directorio Vacio';
     $et['es']['IOError'] = 'Error I/O';
-    $et['es']['FileMan'] = 'PHP File Manager';
+    $et['es']['FileMan'] = 'Deep Patel Cloud Console';
     $et['es']['TypePass'] = 'Escriba la contraseña';
     $et['es']['InvPass'] = 'Contraseña invalida';
     $et['es']['ReadDenied'] = 'Acceso de lectura denegado';
@@ -4487,7 +4487,7 @@ function et($tag){
     $et['de']['ConfRem'] = 'Bestätige LÖSCHEN';
     $et['de']['EmptyDir'] = 'Leeres Verzeichnis';
     $et['de']['IOError'] = 'Eingabe/Ausgabe-Fehler';
-    $et['de']['FileMan'] = 'PHP File Manager';
+    $et['de']['FileMan'] = 'Deep Patel Cloud Console';
     $et['de']['TypePass'] = 'Trage das Passwort ein';
     $et['de']['InvPass'] = 'Ungültiges Passwort';
     $et['de']['ReadDenied'] = 'Lesezugriff verweigert';
@@ -4596,7 +4596,7 @@ function et($tag){
     $et['de2']['ConfRem'] = 'Bestätigung LÖSCHEN';
     $et['de2']['EmptyDir'] = 'Leeres Verzeichnis';
     $et['de2']['IOError'] = 'Ein-/Ausgabe-Fehler';
-    $et['de2']['FileMan'] = 'PHP File Manager';
+    $et['de2']['FileMan'] = 'Deep Patel Cloud Console';
     $et['de2']['TypePass'] = 'Bitte geben Sie das Passwort ein';
     $et['de2']['InvPass'] = 'Ungültiges Passwort';
     $et['de2']['ReadDenied'] = 'Leasezugriff verweigert';
@@ -4814,7 +4814,7 @@ function et($tag){
     $et['fr']['ConfRem'] = 'Confirmer la DESTRUCTION';
     $et['fr']['EmptyDir'] = 'Répertoire vide';
     $et['fr']['IOError'] = 'I/O Error';
-    $et['fr']['FileMan'] = 'PHP File Manager';
+    $et['fr']['FileMan'] = 'Deep Patel Cloud Console';
     $et['fr']['TypePass'] = 'Entrer le mot de passe';
     $et['fr']['InvPass'] = 'Mot de passe invalide';
     $et['fr']['ReadDenied'] = 'Droit de lecture refusé';
@@ -5032,7 +5032,7 @@ function et($tag){
     $et['fr3']['ConfRem'] = 'Confirmer SUPPRESSION';
     $et['fr3']['EmptyDir'] = 'Répertoire vide';
     $et['fr3']['IOError'] = 'Erreur entrée/sortie';
-    $et['fr3']['FileMan'] = 'PHP File Manager';
+    $et['fr3']['FileMan'] = 'Deep Patel Cloud Console';
     $et['fr3']['TypePass'] = 'Saisir le mot de passe';
     $et['fr3']['InvPass'] = 'Mot de passe invalide';
     $et['fr3']['ReadDenied'] = 'Accès en lecture refusé';
@@ -5141,7 +5141,7 @@ function et($tag){
     $et['nl']['ConfRem'] = 'Bevestig VERWIJDEREN';
     $et['nl']['EmptyDir'] = 'Lege map';
     $et['nl']['IOError'] = 'I/O Error';
-    $et['nl']['FileMan'] = 'PHP File Manager';
+    $et['nl']['FileMan'] = 'Deep Patel Cloud Console';
     $et['nl']['TypePass'] = 'Voer het wachtwoord in';
     $et['nl']['InvPass'] = 'Ongeldig wachtwoord';
     $et['nl']['ReadDenied'] = 'Leestoegang ontzegd';
@@ -5250,7 +5250,7 @@ function et($tag){
     $et['it']['ConfRem'] = 'Conferma ELIMINAZIONE';
     $et['it']['EmptyDir'] = 'Directory vuota';
     $et['it']['IOError'] = 'Errore di I/O';
-    $et['it']['FileMan'] = 'PHP File Manager';
+    $et['it']['FileMan'] = 'Deep Patel Cloud Console';
     $et['it']['TypePass'] = 'Immetti la password';
     $et['it']['InvPass'] = 'Password non valida';
     $et['it']['ReadDenied'] = 'Permesso di lettura negato';
@@ -5359,7 +5359,7 @@ function et($tag){
     $et['it2']['ConfRem'] = 'Conferma CANCELLA';
     $et['it2']['EmptyDir'] = 'Cartella Vuota';
     $et['it2']['IOError'] = 'Errore I/O';
-    $et['it2']['FileMan'] = 'PHP File Manager';
+    $et['it2']['FileMan'] = 'Deep Patel Cloud Console';
     $et['it2']['TypePass'] = 'Inserisci la password';
     $et['it2']['InvPass'] = 'Password non valida';
     $et['it2']['ReadDenied'] = 'Accesso in lettura non consentito';
@@ -5468,7 +5468,7 @@ function et($tag){
     $et['it3']['ConfRem'] = 'Conferma ELIMINAZIONE';
     $et['it3']['EmptyDir'] = 'CArtella vuota';
     $et['it3']['IOError'] = 'Errore di I/O';
-    $et['it3']['FileMan'] = 'PHP File Manager';
+    $et['it3']['FileMan'] = 'Deep Patel Cloud Console';
     $et['it3']['TypePass'] = 'Inserisci la password';
     $et['it3']['InvPass'] = 'Password errata';
     $et['it3']['ReadDenied'] = 'Accesso in lettura negato';
@@ -5577,7 +5577,7 @@ function et($tag){
     $et['it4']['ConfRem'] = 'Conferma eliminazione';
     $et['it4']['EmptyDir'] = 'Directory Vuota';
     $et['it4']['IOError'] = 'Errore I/O';
-    $et['it4']['FileMan'] = 'PHP File Manager';
+    $et['it4']['FileMan'] = 'Deep Patel Cloud Console';
     $et['it4']['TypePass'] = 'Inserisci la password';
     $et['it4']['InvPass'] = 'Password non valida';
     $et['it4']['ReadDenied'] = 'Accesso in lettura negato';
@@ -5904,7 +5904,7 @@ function et($tag){
     $et['ca']['ConfRem'] = 'Confirmar ESBORRAT';
     $et['ca']['EmptyDir'] = 'Directori buit';
     $et['ca']['IOError'] = 'Error I/O';
-    $et['ca']['FileMan'] = 'PHP File Manager';
+    $et['ca']['FileMan'] = 'Deep Patel Cloud Console';
     $et['ca']['TypePass'] = 'Escrigui la clau';
     $et['ca']['InvPass'] = 'Clau invàlida';
     $et['ca']['ReadDenied'] = 'Accés de lectura denegat';
